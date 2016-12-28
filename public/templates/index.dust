@@ -1,5 +1,12 @@
 {>"layouts/master" /}
 
 {<body}
-    <h1>{@pre type="content" key="greeting"/}</h1>
+	<div class="large-3 colums book">
+		<img src="img/node1.jpg" />
+		<h4>Professional Node.js</h4>
+		<p>Node.js is a powerful and popular new framework for writing scalable network programs using JavaScript. 
+		<div class="price">Buy it for <span>$19.99</span></div>
+		<br>
+		<a class='button small radius' href='/book/details/1'>Book Details</a>
+	</div>
 {/body}
