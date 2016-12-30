@@ -1,12 +1,15 @@
 {>"layouts/master" /}
 
 {<body}
-	<div class="large-3 colums book">
-		<img src="img/node1.jpg" />
-		<h4>Professional Node.js</h4>
-		<p>Node.js is a powerful and popular new framework for writing scalable network programs using JavaScript. 
-		<div class="price">Buy it for <span>$19.99</span></div>
+	{#books}
+		<div class="large-3 colums book">
+		<img src="img/{.cover}" />
+		<h4>{.title}</h4>
+		<p>{.turnText}</p> 
+		<div class="price">Buy it for <span>{.price}</span></div>
 		<br>
-		<a class='button small radius' href='/book/details/1'>Book Details</a>
+		<a class='button small radius' href='/books/details/{._id}'>Book Details</a>
 	</div>
+	{/books}
+	
 {/body}

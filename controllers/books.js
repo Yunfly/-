@@ -6,7 +6,7 @@ module.exports = function (router) {
     });
 
     router.get('/details/:id', function (req, res) {                
-        res.render('book/details');
+        res.render('books/details');
 
     });
 };
