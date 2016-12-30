@@ -1,0 +1,24 @@
+{>"layouts/master" /}
+
+{<body}
+  <div class="row">
+    <div class="large-4 columns">
+      <img src="/img/node1.jpg" alt="">
+    </div>
+    <div class="large-8 columns">
+      <h2>Professional Node.js</h2>
+      <ul class="bookInfo">
+        <li>Category:Node.js</li>
+        <li>Auth:John Doe</li>
+        <li>Publisher:Some Publisher</li>
+      </ul>
+      <br>
+      <div class="price">
+        <span>$19.99</span>
+      </div>
+      <br>
+      <p>Node.js is a powerful and popular new framework for writing scalable network programs using JavaScript. </p>
+      <a class="button success">Cart</a>
+    </div>
+  </div>
+{/body}
