@@ -5,9 +5,9 @@ var mongoose = require('mongoose');
 var bookModel = function(){
 	var bookSchema = mongoose.Schema({
 		title:String,
-		categeor:String,
+		category:String,
 		description:String,
-		auth:String,
+		author:String,
 		publisher:String,
 		price:Number,
 		cover:String

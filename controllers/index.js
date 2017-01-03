@@ -2,6 +2,7 @@
 
 var IndexModel = require('../models/index');
 var Book = require('../models/bookModel');
+var Category = require('../models/categoryModel');
 
 module.exports = function (router) {
 

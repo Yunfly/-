@@ -8,33 +8,19 @@
 	    <tr>
 	      <th width="200">ID</th>
 	      <th width="200">Category Names</th>
-	      <th width="200">Category</th>
 	      <th width="180"></th>
 	      <th width="180"></th>
 	    </tr>
 	  </thead>
 	  <tbody>
+	  {#categories}
 	    <tr>
-	      <td>123123123123</td>
-	      <td>Category Sample</td>
-	      <td>Some Category</td>
-	      <td><a class='button tiny' href='/manage/categories/edit/1'>Edit</a></td>
-	      <td><a class='button tiny alert removeBook' href='#'>Delete</a></td>
+	      <td>{._id}</td>
+	      <td>{.name}</td>
+	      <td><a class='button radius tiny' href='/manage/categories/edit/1'>Edit</a></td>
+	      <td><a class='button radius tiny alert removeBook' href='#'>Delete</a></td>
 	    </tr>
-	   <tr>
-	      <td>123123123123</td>
-	      <td>Category Sample</td>
-	      <td>Some Category</td>
-	      <td><a class='button tiny' href='/manage/categories/edit/1'>Edit</a></td>
-	      <td><a class='button tiny alert removeBook' href='#'>Delete</a></td>
-	    </tr>
-	    <tr>
-	      <td>123123123123</td>
-	      <td>Category Sample</td>
-	      <td>Some Category</td>
-	      <td><a class='button tiny' href='/manage/categories/edit/1'>Edit</a></td>
-	      <td><a class='button tiny alert removeBook' href='#'>Delete</a></td>
-	    </tr>
+	  {/categories} 
 	  </tbody>
 	</table>
 {/body}
