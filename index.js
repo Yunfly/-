@@ -2,7 +2,7 @@
 
 var express = require('express');
 var kraken = require('kraken-js');
-var flash = require('connect-flash')
+var flash = require('connect-flash');
 var db = require('./lib/db');
 
 

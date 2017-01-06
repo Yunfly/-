@@ -1,0 +1,25 @@
+{>"layouts/manager" /}
+
+{<body}
+	<div class=''>
+		<div class='large-12 colums'>
+		 <h2>Edit Category</h2>
+		 <form method="post" action='/manage/categories'>
+		 	<div class="">
+		 		<div class='large-12 colums'>
+		 			<label>category
+		 				<input name='name' type='text'>
+		 			</label>
+		 		</div> 
+		 	</div>
+		
+		 		<div class='large-12 colums'>
+		 			<input type='submit' class='button  radius' value='Edit' />
+		 		</div> 
+		 	</div>
+		 	<input type='hidden' value="{_csrf}" name="_csrf" />
+		 	</form>
+		 </div>
+	</div>
+{/body}
+

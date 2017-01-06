@@ -1,0 +1,71 @@
+{>"layouts/manager" /}
+
+{<body}
+	<div class=''>
+		<div class='large-12 colums'>
+		 <h2>Edit Book</h2>
+		 <form method="post" action='/manage/books/edit/{book._id}'>
+		 	<div class="">
+		 		<div class='large-12 colums'>
+		 			<label>Title
+		 				<input name='title' value='{book.title}' type='text'>
+		 			</label>
+		 		</div> 
+		 	</div>
+		 	<div class="">
+		 		<div class='large-12 colums'>
+		 			<label>Author
+		 				<input name='author' value='{book.author}' type='text'>
+		 			</label>
+		 		</div> 
+		 	</div>
+		 	<div class="">
+		 		<div class='large-12 colums'>
+		 			<label>Publisher
+		 				<input name='publisher' value='{book.publisher}' type='text'>
+		 			</label>
+		 		</div> 
+		 	</div>
+		 	<div class="">
+		 		<div class='large-12 colums'>
+		 			<label>Price
+		 				<input name='price' value='{book.price}' type='text'>
+		 			</label>
+		 		</div> 
+		 	</div>
+		 	<div class="">
+		 		<div class='large-12 colums'>
+		 			<label>Category
+		 			<select name="category">
+		 			{#categories}
+		 				<option value="{.name}">{.name}</option>
+		 			{/categories}
+		 			</select>
+		 			</label>
+		 		</div> 
+		 	</div>
+		 	<div class="">
+		 		<div class='large-12 colums'>
+		 			<label>Description
+		 				<input name='description' value='{book.description}' type='text'>
+		 			</label>
+		 		</div> 
+		 	</div>
+		 	<div class="">
+		 		<div class='large-12 colums'>
+		 			<label>Cover URl
+		 				<input name='cover' value='{book.cover}' type='text'>
+		 			</label>
+		 		</div> 
+		 	</div>
+		 	<div class="">
+		 		<div class='large-12 colums'>
+		 			<input type='submit' class='button radius' value='submit' />
+		 		</div> 
+		 	</div>
+		 	<input type='hidden' value="{_csrf}" name="_csrf" />
+		 	</form>
+		 </div>
+	</div>
+{/body}
+

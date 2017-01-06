@@ -24,7 +24,7 @@
               <li><a href="/manage">Dashboard</a></li>
               <li><a href="/manage/books">Books</a></li>
               <li><a href="/manage/categories">Categories</a></li>
-              <li><a href="">View WebSite</a></li>
+              <li><a href="/">View WebSite</a></li>
             </ul>
           </section>
         </nav>
@@ -32,7 +32,6 @@
     </div>
     <div class="row">
       <div class="large-12 columns">
-            {messages|s}
             {+body /}
       </div>
     </div>

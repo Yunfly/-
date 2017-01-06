@@ -17,8 +17,8 @@
 	    <tr>
 	      <td>{._id}</td>
 	      <td>{.name}</td>
-	      <td><a class='button radius tiny' href='/manage/categories/edit/1'>Edit</a></td>
-	      <td><a class='button radius tiny alert removeBook' href='#'>Delete</a></td>
+	      <td><a class='button radius tiny' href='/manage/categories/edit/{._id}'>Edit</a></td>
+	      <td><a class='button radius tiny alert removeCategory' data-id='{._id}' href='#'>Delete</a></td>
 	    </tr>
 	  {/categories} 
 	  </tbody>

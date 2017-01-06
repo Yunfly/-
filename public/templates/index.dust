@@ -2,7 +2,7 @@
 
 {<body}
 	{#books}
-		<div class="large-3 colums book">
+		<div class="large-3 left colums book">
 		<img src="img/{.cover}" />
 		<h4>{.title}</h4>
 		<p>{.turnText}</p> 
