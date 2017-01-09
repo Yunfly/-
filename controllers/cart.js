@@ -12,7 +12,7 @@ module.exports = function (router) {
       // Get total
       for(var item in cart){
         displayCart.item.push(cart[item]);
-        total +=(cart[item].qty*cart[item].price);
+        total += (cart[item].qty * cart[item].price);
       }
       displayCart.total = total;
 
@@ -23,16 +23,26 @@ module.exports = function (router) {
     });
 
     router.post('/:id', function (req, res) {                
+        req.session.cart = req.session.cart || {};
+        var cart = req.session.cart;
+
         Book.findOne({_id:req.params.id},function(err,book){
-        	if (err) {
-        		console.log(err);
-        	}
+          if (err) {
+            console.log(err)
+          }
 
-        	var model = {
-        		book:book
-        	};
+          if (cart[req.params.id]) {
+            cart[req.params.id].qty++;
+          }else{
+            cart[req.params.id] = {
+              item:book._id,
+              title:book.title,
+              price:book.price,
+              qty:1
+            }
+          }
 
-        	res.render('books/details',model )
-        });
+          res.redirect('/cart');
+        })
     });
 };

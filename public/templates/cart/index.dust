@@ -7,24 +7,22 @@
 	<div class='row'>
 		<div class='large-12 colums'>
 			<h2>Your Shopping Cart<span><a href='/cart/remove'>Empty Cart</a></span></h2>
-			{?cart.items}
+			{?cart.item}
 				<table>
 				   <thead>
 				   	  <tr>
 				   	  	<th width='650'>Item</th>
 				   	  	<th width='100'>Quantity</th>
 				   	  	<th width='100'>Total</th>
-				   	  	<th width='100'>Item</th>
-				   	  </tr>
-				   </thead>
+				   	  	<th width='100'></th>		</thead>
 				   <tbody>
-				   	  {#cart.items}
-				   	  	<tr>
-				   	  	   <td><a href='books/details/1'>{.title}</a></td>
-				   	  	   <td>{.qyt}</td>
-				   	  	   <td>${@math key="{.price}" method="multiply" opearand="{.qty}" /}</td>
-				   	  	</tr>
-				   	  {/cart.items}
+				   		{#cart.item}
+					   	  	<tr>
+					   	  	   <td><a href='books/details/1'>{.title}</a></td>
+					   	  	   <td>{.qty}</td>
+					   	  	   <td>${@math key="{.price}" method="multiply" operand="{.qty}" /}</td>
+					   	  	</tr>
+				   		{/cart.item}
 				   </tbody>
 				</table>
 				<div class='row'>
@@ -37,7 +35,7 @@
 				</div>
 			{:else}
 				<p>There are no items in your cart</p>
-			{/cart.items}
+			{/cart.item}
 		</div>
 	</div>
 {/body}
